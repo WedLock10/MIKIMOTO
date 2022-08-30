@@ -1,0 +1,501 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway:wght@200;300;400;500;600&display=swap');
+:root{
+  --white: #fff;
+  --dark: #222222;
+  --cta: rgba(0,0,0,0.3);
+  --hover: rgba(0,0,0,0.8);
+  --opac: rgba(255,165,0,0.1);
+  --head: 'Aboreto', cursive;
+  --child: 'Raleway', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+img{
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+button{
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+button:hover{
+  background: var(--hover);
+  color: var(--white);
+}
+/* navigation */
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem;
+  position: relative;
+}
+.navlinks{
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  background: var(--hover);
+  z-index: 2;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.navlinks ul{
+  list-style: none;
+  display: flex;
+  text-align: center;
+}
+.navlinks li{
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+}
+.navlinks li a{
+  color: var(--white);
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 350;
+  letter-spacing: 1px;
+  font-family: var(--child);
+}
+.navlinks li:hover{
+  background: rgba(255,255,255,0.3);
+}
+.icon, .shop-btn a{
+  color: var(--dark);
+  font-size: 1.5rem;
+}
+.icon img, .shop-btn img{
+  width: 40px;
+}
+.logo{
+  font-family: var(--head);
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.logo a{
+  color: var(--dark)
+}
+/* navigation end */
+/* header */
+.container{
+  position: relative;
+}
+.carousel-wrapper img{
+  min-height: 45vh;
+  object-fit: cover;
+}
+.text{
+  background: var(--cta);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.text h2{
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: var(--child);
+  color: var(--white);
+}
+.text button{
+  padding: 1.5rem 3rem;
+  background: var(--cta);
+  color: var(--white);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: var(--head);
+  transition: all 0.5s ease;
+}
+.text button:hover{
+  background: var(--hover);
+}
+/* header ends*/
+/* what we do */
+.wedo{
+  padding: 4rem 0;
+  text-align: center;
+  font-size: 1rem;
+  background: var(--opac);
+  font-family: var(--child);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/* highlight*/
+.highlight,
+.variety,
+.collections,
+.events,
+.shop,
+.reals,
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 2.2rem;
+}
+/* will be use multiple */
+
+
+.title{
+  width: 60%;
+  text-align: center;
+  margin-top: 3rem;
+  font-family: var(--child);
+}
+.title h2{
+  font-size:2rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.title p{
+  font-size: 0.8rem;
+  font-weight: 350;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.title button,
+.event-text button,
+.overlay button{
+  border: 1.5px solid var(--dark);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+  transition-delay: 0;
+}
+/* highlight end */
+/*variety */
+.item-card{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+.item img{
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+.link{
+  padding: 1rem 0;
+}
+.link a{
+  color: var(--dark);
+  font-weight: 600;
+  font-family: var(--child);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+.link a:after{
+  content: "";
+  width: 10%;
+  height: 2px;
+  background: var(--dark);
+  display: block;
+  margin:.5rem auto;
+  transition: 0.5s ease;
+}
+.link a:hover:after{
+  width: 50%;
+}
+/* collection */
+.collections{
+  background: var(--opac);
+}
+.item-box{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  overflow: hidden;
+  overflow-x: scroll;
+  gap: 1rem;
+  padding: 1rem;
+}
+.col{
+  width: 100%;
+  transition: all .5s ease;
+}
+.col:hover{
+  background: var(--white);
+  border: 1px solid var(--dark);
+}
+.col img{
+  aspect-ratio: 1/1;
+}
+/* events */
+.events-container{
+  display: flex;
+  padding-top: 3rem;
+}
+.left, .right{
+  width: 100%;
+  margin: 0 1rem;
+  font-family: var(--child);
+}
+.event-text{
+  padding: 1rem 0;
+}
+.event-text h2{
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+}
+.event-text p{
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-family: var(--child);
+}
+/* shop */
+.shop{
+  background: var(--opac);
+  padding: 1rem;
+}
+.shop .title{
+  margin-top: 0;
+}
+.shop-image{
+  margin: 2rem .5rem;
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.overlay button{
+  margin-bottom: 80px;
+  font-family: var(--head);
+  font-weight: 600;
+}
+/* testimonial*/
+.testimonial{
+  text-align: center;
+  font-family: var(--child);
+  padding: 1rem 0;
+}
+.testimonial span{
+  margin: 1rem auto;
+  color: orange;
+  font-size: 0.8rem;
+}
+/* reals*/
+.reals a{
+  color: rgb(255,165,0);
+  font-weight: 400;
+  font-family: var(--child);
+}
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--white);
+}
+.gallery img{
+  aspect-ratio: 1/1;
+}
+/* footer */
+footer{
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+.nav-items{
+  width: 90%;
+}
+.footer-link{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-direction: column;
+  font-weight: 400;
+}
+.info{
+  display: none;
+}
+.footer-link h3{
+  font-size: 1.1rem;
+}
+.drop{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-family: var(--child);
+  transition: all 0.5s ease;
+}
+.drop:hover{
+  color: var(--dark);
+  background: rgb(245,245,245,0.5);
+}
+.info{
+  padding: 0.8rem;
+  font-family: var(--child);
+  line-height: 1.2;
+}
+.info a{
+  text-decoration: underline;
+}
+.info p, .info a{
+  color: var(--dark);
+  font-size: 0.9rem;
+  text-align: left;
+}
+/* social medias */
+.social-links{
+  padding: 4rem 0;
+}
+.social-links a{
+  font-size: 2rem;
+  color: var(--cta);
+  margin: 0.5rem;
+  transition: all 0.5s ease;
+}
+.social-links a:hover{
+  color: var(--dark);
+  font-size: 2.2rem;
+}
+
+#copy{
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  font-family: var(--child);
+  color: var(--dark);
+  background: var(--opac);
+  padding: 1.5rem;
+  width: 100%;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* media queries */
+@media screen and (max-width: 700px) {
+  /* smaller screen below 700px */
+  .navlinks{
+    background: white;
+  }
+  .navlinks ul{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 2rem 0;
+  }
+  .navlinks li a{
+    font-size: 1.2rem;
+    color: var(--dark);
+  }
+  .navlinks li:hover{
+    background: rgb(245,245,245,0.7);
+  }
+  .logo{
+    font-size: 1rem;
+  }
+  a{
+    font-size: 1.3rem;
+  }
+  .reals a{
+    font-size: 0.8rem;
+  }
+  .carousel-wrapper img{
+    min-height: 100vh;
+    object-fit: cover;
+  }
+  /* text overlay */
+  .text h2{
+    text-align: center;
+    font-size: 4rem;
+  }
+  .wedo{
+    padding: 3rem 1rem;
+  }
+  .highlight img, .shop-image img{
+    object-fit: cover;
+    height: 500px;
+  }
+  /* title multiple use */
+  .title{
+    width: 100%;
+  }
+  .title h2{
+    font-size: 1.8rem;
+  }
+  .title p{
+    font-size: 1rem;
+  }
+  /* variety */
+  .item-card{
+    grid-template-columns: repeat(1,1fr);
+    padding: 0;
+  }
+  .item-card img{
+    aspect-ratio: 1/1;
+  }
+  /* collections */
+  .item-box, .gallery{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* events */
+  .events-container{
+    flex-direction: column;
+    margin: 0;
+  }
+  .left, .right{
+    margin: 0;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+  .event-text h2{
+    font-size: 1.8rem;
+  }
+  .event-text p{
+    font-size: 1rem;
+  }
+  /* shop */
+  .shop{
+    padding:1rem 0;
+  }
+  /* gallery */
+  .gallery{
+    gap: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .gallery{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
